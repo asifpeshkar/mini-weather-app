@@ -32,7 +32,7 @@ MiniWeather is a lightweight web application that provides real-time weather inf
 ## Credits
 
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
-- Developed by [Your Name]
+- Developed by Asif Peshkar @ NexumSoftware
 
 ---
 Feel free to contribute or report issues!

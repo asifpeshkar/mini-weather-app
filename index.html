@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif's Weather Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asif's Weather Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="card">
-    <h1>Asif's Weather Update</h1>
-    <form id="weather-form">
+    <h1>Asif's Weather Update App</h1>
+
+    <form id="weather-form" class="search">
       <input id="city" placeholder="Enter city (e.g., Mumbai)" required />
       <button type="submit">Get Weather</button>
     </form>
-    <p id="status"></p>
+
+    <p id="status" class="muted"></p>
+
+    <section class="panels">
+      <!-- Current -->
+      <section class="panel" id="panel-current">
+        <h2 id="loc">—</h2>
+        <div class="current-row">
+          <div class="current-main">
+            <div id="icon" class="icon">❓</div>
+            <div>
+              <div class="temp"><span id="temp">—</span>°C</div>
+              <div id="desc" class="desc">—</div>
+              <div class="muted">Feels like <span id="feels">—</span>°C</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wind / Sun -->
+      <section class="panel" id="panel-wind">
+        <h3>Wind & Sun</h3>
+        <p id="wind">—</p>
+        <p id="sun">—</p>
+      </section>
+
+      <!-- Air Quality -->
+      <section class="panel hidden" id="panel-aqi">
+        <h3>Air Quality</h3>
+        <p>US AQI: <strong id="aqi">—</strong></p>
+        <p class="muted">
+          PM2.5: <span id="pm25">—</span> &nbsp; • &nbsp;
+          PM10: <span id="pm10">—</span>
+        </p>
+      </section>
+
+      <!-- Forecast -->
+      <section class="panel" id="panel-forecast">
+        <h3>5-day Forecast</h3>
+        <ul id="forecast-list" class="forecast"></ul>
+      </section>
+    </section>
   </main>
 
   <script src="script.js"></script>
